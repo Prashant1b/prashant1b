@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - Fitness Freak</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="https://yt3.googleusercontent.com/d-B-ZBPsz6oE8Wmyhg_GSg1HzyWL1qhCmo1yr2ppaANowk1AxpJINkBv8IPY0wp7VSlL1jz2oA=s900-c-k-c0x00ffffff-no-rj">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Create an Account</h2>
+        <form id="registerForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <button type="submit" class="button">Register</button>
+        </form>
+        <div class="register-link">
+            Already have an account? <a href="#" onclick="showLogin()">Login here</a>
+        </div>
+    </div>
+
+    <div class="login-container" id="loginContainer" style="display:none;">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit" class="button">Login</button>
+        </form>
+        <div class="register-link">
+            Don't have an account? <a href="#" onclick="showRegister()">Register here</a>
+        </div>
+        <div class="register-link">
+            <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+        </div>
+    </div>
+
+    <div class="forgot-password-container" id="forgotPasswordContainer" style="display:none;">
+        <h2>Forgot Password</h2>
+        <form id="forgotPasswordForm">
+            <input type="email" id="forgotEmail" placeholder="Email" required>
+            <button type="submit" class="button">Send OTP</button>
+        </form>
+        <div class="register-link">
+            Remember your password? <a href="#" onclick="showLogin()">Login here</a>
+        </div>
+    </div>
+
+    <div class="otp-container" id="otpContainer" style="display:none;">
+        <h2>Verify OTP</h2>
+        <form id="otpForm">
+            <input type="text" id="otp" placeholder="Enter OTP" required>
+            <button type="submit" class="button">Verify OTP</button>
+        </form>
+    </div>
+
+    <div class="profile-badge" id="profileBadge" style="display:none;">
+        <h3>Welcome, <span id="userName"></span></h3>
+        <p>Email: <span id="userEmail"></span></p>
+        <button onclick="logout()" class="button">Logout</button>
+    </div>
+
+    <script src="login.js"></script>
+    <footer>
+        <p>&copy; 2022-2023 Fitness Freak<br>Created by Prashant Bhardwaj.<br/>All rights reserved.</p>
+    </footer>
+</body>
+</html>

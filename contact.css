@@ -1,0 +1,118 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Arial', sans-serif;
+   line-height: 1.6;
+   background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmTwaxUOKJi-XIRNzXFLwlMQB0fsk4dkTsKQ&s') no-repeat center center fixed;
+   background-size: cover;
+   color: #fff;
+   padding: 0;
+}
+
+/* Fixed Header Styles */
+header {
+   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+   padding: 20px 0;
+   text-align: center;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 100;
+}
+
+header .main-nav .logo img {
+   max-width: 150px;
+   height: auto;
+}
+
+header .main-nav ul {
+   list-style: none;
+   padding: 0;
+}
+
+header .main-nav ul li {
+   display: inline-block;
+   margin: 0 20px;
+}
+
+header .main-nav ul li a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 18px;
+}
+
+header .main-nav ul li a:hover,
+header .main-nav ul li a.active {
+   color: #f39c12; /* Active or hover color */
+}
+
+/* Contact Section */
+.contact {
+   margin-top: 300px; /* Increased margin-top to push content much lower */
+   padding: 50px 20px; /* Regular padding for the contact section */
+   text-align: center;
+}
+
+.contact-container {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.contact-box {
+   background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   width: 300px;
+   text-align: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.contact-image img {
+   width: 50px;
+   height: 50px;
+   margin-bottom: 15px;
+}
+
+.contact-info h4 {
+   margin-bottom: 10px;
+   color: #333;
+   font-size: 18px;
+}
+
+.contact-info p {
+   color: #666;
+   font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+   .contact-container {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .contact-box {
+       width: 80%;
+       margin-bottom: 20px;
+   }
+
+   /* Ensure the content is still spaced properly on small screens */
+   .contact {
+       margin-top: 320px; /* Increased margin-top for smaller screens */
+   }
+   
+}
+
